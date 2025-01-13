@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Names Popularity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/html/index.html#projects" class="back-button">← Back to Portfolio</a>
+        <h1>Baby Names Popularity</h1>
+        <div class="instructions">
+            <p>How to use:</p>
+            <ul>
+                <li>Enter a name followed by gender (M/F)</li>
+                <li>Case doesn't matter - "Ryan M", "ryan m", "RYAN M" all work</li>
+                <li>Examples: "John M", "mary f", "SaRaH F"</li>
+                <li>Press Enter to search</li>
+                <li>Type "quit" to exit</li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <div class="console-container">
+                <textarea id="javaConsole" readonly></textarea>
+                <input type="text" id="userInput" placeholder="Enter name and gender (e.g., 'John M' or 'mary f')..." onkeypress="handleInput(event)">
+            </div>
+            <div class="graph-container">
+                <canvas id="graphCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="babynames.js"></script>
+</body>
+</html> 

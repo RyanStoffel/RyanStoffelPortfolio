@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Console Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/html/index.html#projects" class="back-button">← Back to Portfolio</a>
+        <h1>TicTacToe Console Demo</h1>
+        <div class="instructions">
+            <p>How to play:</p>
+            <ul>
+                <li>Enter your moves as row and column numbers (1-3) separated by space</li>
+                <li>Example: type "1 2" to place your mark in row 1, column 2</li>
+                <li>Press Enter to submit your move</li>
+            </ul>
+        </div>
+        <textarea id="javaConsole" readonly></textarea>
+        <input type="text" id="userInput" placeholder="Enter your move here (e.g., '1 2')..." onkeypress="handleInput(event)">
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html> 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Study, Mate</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111827;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        .launch-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .launch-button:hover {
+            background-color: #4338ca;
+        }
+
+        .note {
+            color: #9ca3af;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/html/index.html#projects" class="back-button">← Back to Portfolio</a>
+        <h1>Study, Mate</h1>
+        <p>You're about to visit the live React application.</p>
+        <a href="http://localhost:3000" class="launch-button">Launch Application</a>
+        <p class="note">Note: Make sure your React development server is running on port 3000</p>
+    </div>
+</body>
+</html> 
