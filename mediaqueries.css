@@ -118,6 +118,50 @@
     .form-group textarea {
         width: calc(100% - 10px);
     }
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* About section rework */
+    #about .section-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #about .section__pic-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        order: -1; /* Moves picture to top */
+    }
+
+    .about-details-container {
+        width: 100%;
+    }
+
+    .about-containers {
+        margin-top: 1rem;
+    }
+
+    .text-container {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /* Ensure containers don't overflow */
+    .section-container,
+    .about-containers,
+    .experience-details-container,
+    .project-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
 }
 
 /* Add new iPhone-specific media queries */
@@ -242,6 +286,20 @@
     #socials-container .icon {
         width: 2rem;
         height: 2rem;
+    }
+
+    #about .section__pic-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-containers {
+        gap: 1rem;
+    }
+
+    .text-container {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
     }
 }
 
