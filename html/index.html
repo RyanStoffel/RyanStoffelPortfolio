@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/mediaqueries.css">
 </head>
 <body>
+    <canvas id="particles-js"></canvas>
     <nav id="desktop-nav">
         <div class="logo">
             Ryan Stoffel
@@ -16,6 +17,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -35,6 +37,7 @@
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#education" onclick="toggleMenu()">Education</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -48,11 +51,16 @@
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Ryan Stoffel</h1>
-            <p class="section__text__p2"><span class="typing-text"></span></p>
+            <p class="section__text__p2">Computer Science Student</p>
+            <p class="location">
+                <svg class="location-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                </svg>
+                Corona, California
+            </p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('../assets/resume.pdf')">Download CV</button>
                 <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            
             </div>
             <div id="socials-container">
                 <img src="../assets/linkedin.png" alt="My linkedin profile" class="icon" onclick="location.href='https://linkedin.com/in/ryan-stoffel'">
@@ -83,7 +91,7 @@
                     </div>
                 </div>
                 <div class="text-container">
-                    <p>My name is Ryan Stoffel, and I’m a computer science major at California Baptist University. I have experience with programming languages like C++, C#, Java, HTML5, CSS, React, Node.js, and MySQL. I’m passionate about game development, working in Unity Game Engine to create games like "Lance UP!", a 2D platformer, Pong, Tic Tac Toe, and Snake.</p>
+                    <p>My name is Ryan Stoffel, and I'm a computer science major at California Baptist University. I have experience with programming languages like C++, C#, Java, HTML5, CSS, React, Node.js, and MySQL. I'm passionate about game development, working in Unity Game Engine to create games like "Lance UP!", a 2D platformer, Pong, Tic Tac Toe, and Snake.</p>
                 </div>
             </div>
         </div>
@@ -91,7 +99,36 @@
     </section>
     <section id="experience">
         <p class="section__text__p1">Explore my</p>
-        <h1 class="title">Experience</h1>
+        <h1 class="title">Work Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container" style="margin-top: -20px;">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Front of House Trainer</h3>
+                            <p class="company">Chick Fil-A</p>
+                            <p class="duration">06 / 23 - Present</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Train new employees on the front of house</li>
+                            <li>Handles cash and can count down money drawers</li>
+                            <li>Great customer service skills</li>
+                            <li>Food handling and preparation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img
+            src="../assets/arrow.png"
+            alt="Arrow icon"
+            class="arrow"
+            onclick="location.href='#education'"
+        />
+    </section>
+    <section id="skills">
+        <p class="section__text__p1">Explore my</p>
+        <h1 class="title">Skills</h1>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
@@ -164,6 +201,12 @@
                 </div>
             </div>
         </div>
+        <img
+            src="../assets/arrow.png"
+            alt="Arrow icon"
+            class="arrow"
+            onclick="location.href='#education'"
+        />
     </section>
     <section id="education">
         <p class="section__text__p1">My Academic</p>
@@ -200,13 +243,27 @@
         <img src="../assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
     </section>
     <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="project-container">
             <!-- Project 1 -->
             <div class="project-card">
                 <img src="../assets/project1.png" alt="Project 1" class="project-img">
                 <h3 class="project-title">Studymate</h3>
-                <p class="project-description">A website for students, where they can buy and upload notes.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Tailwind CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">MySQL</span>
+                </div>
+                <p class="project-description">A comprehensive website for students to buy and upload study notes. Features include:</p>
+                <ul class="project-features">
+                    <li>User authentication system</li>
+                    <li>Secure payment integration</li>
+                    <li>Note upload and preview functionality</li>
+                    <li>Search and filter capabilities</li>
+                </ul>
                 <div class="project-btn-container">
                     <a href="../demos/project1demo/homepage.html" class="project-btn live">Live Demo</a>
                     <a href="https://github.com/Joseph-Rus/Study-Mate.git" class="project-btn github">GitHub</a>
@@ -217,7 +274,15 @@
             <div class="project-card">
                 <img src="../assets/project2.png" alt="Project 2" class="project-img">
                 <h3 class="project-title">Tic Tac Toe</h3>
-                <p class="project-description">A Tic Tac Toe game that is played in the console window.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Console App</span>
+                </div>
+                <p class="project-description">A console-based Tic Tac Toe game with the following features:</p>
+                <ul class="project-features">
+                    <li>Player vs Player gameplay</li>
+                    <li>Input validation</li>
+                </ul>
                 <div class="project-btn-container">
                     <a href="../demos/project2demo/tictactoe.html" class="project-btn live">Live Demo</a>
                     <a href="https://github.com/RyanStoffel/TicTacToeConsole.git" class="project-btn github">GitHub</a>
@@ -227,62 +292,86 @@
             <!-- Project 3 -->
             <div class="project-card">
                 <img src="../assets/project3.png" alt="Project 3" class="project-img">
-                <h3 class="project-title">Baby names</h3>
-                <p class="project-description">A website that tells you how popular the input name is throughout the decades </p>
+                <h3 class="project-title">Baby Names</h3>
+                <div class="project-tech">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Data Analysis</span>
+                </div>
+                <p class="project-description">An analytical tool that tracks name popularity across decades featuring:</p>
+                <ul class="project-features">
+                    <li>Historical data visualization</li>
+                    <li>Trend analysis</li>
+                    <li>Gender-based statistics</li>
+                </ul>
                 <div class="project-btn-container">
                     <a href="../demos/project3demo/babynames.html" class="project-btn live">Live Demo</a>
                     <a href="https://github.com/egr222-software-engineering-fall-2024/hw3-RyanStoffel.git" class="project-btn github">GitHub</a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <div class="info-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z" fill="currentColor"/>
-                    </svg>
-                    <p>ryan.stoffel@calbaptist.edu</p>
-                </div>
-                <div class="info-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16.3 14.9 16.2 14.9 16.1 14.9C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8 13.6 6.6 10.8L8.8 8.6C9.1 8.3 9.2 7.9 9 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5ZM5 5H6.5C6.6 5.9 6.8 6.8 7 7.6L5.8 8.8C5.4 7.6 5.1 6.3 5 5ZM19 19C17.7 18.9 16.4 18.6 15.2 18.2L16.4 17C17.2 17.2 18.1 17.4 19 17.4V19Z" fill="currentColor"/>
-                    </svg>
-                    <p>+1 (714) 322-4245</p>
-                </div>
-                <div class="info-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
-                    </svg>
-                    <p>24836 Acadia Dr, Corona, CA 92883</p>
+            <!-- Left side - Contact Info -->
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z" fill="currentColor"/>
+                        </svg>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>ryanstoffel62@icloud.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16.3 14.9 16.2 14.9 16.1 14.9C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8 13.6 6.6 10.8L8.8 8.6C9.1 8.3 9.2 7.9 9 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5ZM5 5H6.5C6.6 5.9 6.8 6.8 7 7.6L5.8 8.8C5.4 7.6 5.1 6.3 5 5ZM19 19C17.7 18.9 16.4 18.6 15.2 18.2L16.4 17C17.2 17.2 18.1 17.4 19 17.4V19Z" fill="currentColor"/>
+                        </svg>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+1 (714) 322-4245</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                        </svg>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>24836 Acadia Dr, Corona, CA 92883</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/ryan-stoffel" target="_blank">
-                        <img src="../assets/linkedin.png" alt="LinkedIn" class="icon">
-                    </a>
-                    <a href="https://github.com/RyanStoffel" target="_blank">
-                        <img src="../assets/github.png" alt="GitHub" class="icon">
-                    </a>
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/ryan-stoffel" target="_blank" class="social-icon">
+                            <img src="../assets/linkedin.png" alt="LinkedIn" class="icon">
+                        </a>
+                        <a href="https://github.com/RyanStoffel" target="_blank" class="social-icon">
+                            <img src="../assets/github.png" alt="GitHub" class="icon">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <h2>Send Me a Message</h2>
+
+            <!-- Right side - Contact Form -->
+            <div class="contact-form-container">
                 <form action="https://formspree.io/f/xrbbjlvv" method="POST" id="contact-form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-color-1">Send Message</button>
                 </form>
@@ -304,5 +393,6 @@
             }, 100);
         });
     </script>
+    <script src="js/network-background.js"></script>
 </body>
 </html>
