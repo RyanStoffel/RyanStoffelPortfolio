@@ -167,4 +167,63 @@ h1 {
         min-width: 100%;
         height: 40vh;
     }
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .instructions {
+        font-size: 0.9rem;
+        margin: 1rem 0;
+    }
+
+    .instructions ul {
+        padding-left: 1.5rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .console-container {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #javaConsole {
+        height: 30vh;
+        font-size: 0.9rem;
+    }
+
+    #userInput {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .graph-container {
+        width: 100%;
+        height: 30vh;
+        margin-top: 1rem;
+    }
+
+    #graphCanvas {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
 } 

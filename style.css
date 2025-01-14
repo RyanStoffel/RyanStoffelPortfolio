@@ -56,31 +56,25 @@ a:hover {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+    transform: translateY(-2px);
 }
 
 .btn-color-1, .btn-color-2 {
-    color: rgb(53, 53, 53) 0.1rem solid;
+    background: white;
+    color: black;
+    border: 2px solid black;
 }
 
 .btn-color-1:hover, .btn-color-2:hover {
-    cursor: pointer;
-}
-
-.btn-color-1, .btn-color-2:hover {
-    background: rgb(53, 53, 53);
-    color: white;
-}
-
-.btn-color-1:hover {
-    background: rgb(0, 0, 0);
-}
-
-.btn-color-2 {
-    background: none;
-}
-
-.btn-color-2:hover {
-    border: rgb(255, 255, 255) 0.1rem solid;
+    background: rgb(240, 240, 240);
 }
 
 /* Icons */

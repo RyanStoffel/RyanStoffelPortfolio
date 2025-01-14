@@ -47,8 +47,37 @@
     }
 
     .btn {
-        padding: 1.2rem 2rem;
-        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        padding: 1rem 2rem;
+        border: 2px solid #000;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: transparent;
+    }
+
+    .btn-color-1 {
+        background: #000;
+        color: #fff;
+    }
+
+    .btn-color-1:hover {
+        background: transparent;
+        color: #000;
+    }
+
+    .btn-color-2 {
+        background: transparent;
+        color: #000;
+    }
+
+    .btn-color-2:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    .btn-container {
+        gap: 1rem;
     }
 
     nav {
@@ -575,5 +604,86 @@
     .nav-links, 
     #hamburger-nav {
         padding-top: env(safe-area-inset-top);
+    }
+
+    /* Project buttons improvements */
+    .project-btn-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .project-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 6px;
+    }
+
+    /* Contact section improvements */
+    .contact-container {
+        padding: 1rem 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .contact-info-container {
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-info-container p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-form-container {
+        padding: 1.5rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    /* Ensure buttons have good touch targets */
+    .submit-btn {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
     }
 }
