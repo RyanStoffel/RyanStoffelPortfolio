@@ -3,96 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Study, Mate</title>
+    <title>Studymate Demo</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111827;
-            color: white;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background-color: #f5f5f5;
         }
 
         .container {
-            text-align: center;
-            max-width: 600px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .back-button {
             display: inline-block;
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
             background-color: #3498db;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 4px;
             margin-bottom: 1.5rem;
             transition: background-color 0.3s ease;
+            font-weight: 500;
         }
 
         .back-button:hover {
             background-color: #2980b9;
         }
 
-        .launch-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #4f46e5;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            margin-top: 2rem;
-            transition: background-color 0.3s ease;
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
         }
 
-        .launch-button:hover {
-            background-color: #4338ca;
+        .development-notice {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
         }
 
-        .note {
-            color: #9ca3af;
-            margin-top: 2rem;
-            font-size: 0.9rem;
+        .development-notice h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .development-notice p {
+            color: #666;
+            margin-bottom: 0;
         }
 
         @media screen and (max-width: 430px) {
             .container {
                 padding: 1rem;
-                width: 90%;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-                margin: 1rem 0;
-            }
-
-            p {
-                font-size: 1rem;
-                line-height: 1.5;
-            }
-
-            .launch-button {
-                width: 100%;
-                padding: 0.8rem;
-                font-size: 1rem;
-                text-align: center;
-                margin-top: 1.5rem;
+                width: 95%;
             }
 
             .back-button {
                 width: 100%;
                 text-align: center;
+                padding: 0.8rem;
                 margin-bottom: 1rem;
-            }
-
-            .note {
-                font-size: 0.8rem;
-                padding: 0 1rem;
             }
         }
     </style>
@@ -100,10 +79,12 @@
 <body>
     <div class="container">
         <a href="/index.html#projects" class="back-button">← Back to Portfolio</a>
-        <h1>Study, Mate</h1>
-        <p>You're about to visit the live React application.</p>
-        <a href="http://localhost:3000" class="launch-button">Launch Application</a>
-        <p class="note">Note: Make sure your React development server is running on port 3000</p>
+        <h1>Studymate Demo</h1>
+        <div class="development-notice">
+            <h2>Under Development</h2>
+            <p>The live demo for Studymate is currently unavailable as the project is still under active development. Please check back later or visit the GitHub repository to see the project's progress.</p>
+            <p>In the meantime, you can explore the source code and contribute to the project on GitHub.</p>
+        </div>
     </div>
 </body>
 </html> 

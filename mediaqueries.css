@@ -164,8 +164,31 @@
     
     .project-card {
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
     }
-    
+
+    .project-btn-container {
+        width: 100%;
+        margin-top: auto;
+        padding: 1rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .project-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
     .project-container {
         gap: 1.5rem;
         margin: 2rem 0;
@@ -538,24 +561,59 @@
     /* Projects section */
     .project-card {
         padding: 1rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
     }
 
     .project-img {
         height: 160px;
+        margin-bottom: 1rem;
     }
 
     .project-title {
         font-size: 1.2rem;
+        margin-bottom: 0.8rem;
     }
 
+    .project-description {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-features {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .project-features li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Fix button container */
     .project-btn-container {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.8rem;
+        padding: 0;
+        margin-top: auto;
     }
 
     .project-btn {
         width: 100%;
         text-align: center;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 6px;
     }
 
     /* Contact section */
@@ -685,5 +743,26 @@
         width: 100%;
         text-align: center;
         padding: 0.8rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        min-height: auto;
+    }
+
+    .project-btn-container {
+        position: static;
+        padding-top: 1rem;
+        gap: 0.5rem;
+    }
+
+    .project-btn {
+        border-radius: 6px;
+        height: auto;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
