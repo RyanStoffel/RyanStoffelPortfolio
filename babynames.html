@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Baby Names Popularity</title>
     <link rel="stylesheet" href="babynames.css">
 </head>
@@ -23,13 +23,17 @@
         <div class="content-wrapper">
             <div class="console-container">
                 <textarea id="javaConsole" readonly></textarea>
-                <input type="text" id="userInput" placeholder="Enter name and gender (e.g., 'John M' or 'mary f')..." onkeypress="handleInput(event)">
+                <input type="text" id="userInput" placeholder="Enter name and gender..." onkeypress="handleInput(event)">
             </div>
             <div class="graph-container">
                 <canvas id="graphCanvas"></canvas>
+                <div class="mobile-message">
+                    <h3>Desktop View Required</h3>
+                    <p>Please use a desktop device to view the popularity graph for better visualization of the data.</p>
+                </div>
             </div>
         </div>
     </div>
     <script src="babynames.js"></script>
 </body>
-</html> 
+</html>

@@ -73,7 +73,7 @@ h1 {
     display: flex;
     gap: 1.5rem;
     flex: 1;
-    min-height: 700px; /* Set minimum height */
+    min-height: 700px;
 }
 
 /* Left side - Console and Input */
@@ -89,6 +89,7 @@ h1 {
     flex: 2;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #graphCanvas {
@@ -113,7 +114,7 @@ h1 {
     resize: none;
     line-height: 1.4;
     font-size: 14px;
-    height: calc(100% - 50px); /* Adjust for input height */
+    height: calc(100% - 50px);
 }
 
 #userInput {
@@ -156,74 +157,78 @@ h1 {
     background: #666;
 }
 
+/* Mobile message styling */
+.mobile-message {
+    display: none;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.mobile-message h3 {
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.mobile-message p {
+    color: #555;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
     .content-wrapper {
         flex-direction: column;
-        min-height: 800px;
+        min-height: auto;
     }
     
     .console-container {
         min-width: 100%;
-        height: 40vh;
+        height: 50vh;
+    }
+
+    .graph-container {
+        min-height: auto;
+    }
+
+    #graphCanvas {
+        display: none;
+    }
+
+    .mobile-message {
+        display: block;
     }
 }
 
 @media screen and (max-width: 430px) {
     .container {
         padding: 1rem;
-        width: 95%;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-    }
-
-    .instructions {
-        font-size: 0.9rem;
-        margin: 1rem 0;
-    }
-
-    .instructions ul {
-        padding-left: 1.5rem;
-    }
-
-    .content-wrapper {
-        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
     }
 
     .console-container {
-        width: 100%;
-        margin-bottom: 1rem;
+        height: 40vh;
     }
 
     #javaConsole {
-        height: 30vh;
-        font-size: 0.9rem;
+        height: calc(100% - 50px);
     }
 
-    #userInput {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1rem;
+    .mobile-message {
+        padding: 1rem;
     }
 
-    .graph-container {
-        width: 100%;
-        height: 30vh;
-        margin-top: 1rem;
+    .mobile-message h3 {
+        font-size: 1.1rem;
     }
 
-    #graphCanvas {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .back-button {
-        width: 100%;
-        text-align: center;
-        padding: 0.8rem;
-        margin-bottom: 1rem;
+    .mobile-message p {
+        font-size: 0.85rem;
     }
 } 
