@@ -356,5 +356,28 @@
             }, 100);
         });
     </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBIHZCx5WjdwZfK2sfYJHT9wk2e5a8yuKg",
+          authDomain: "ryan-stoffel-portfolio.firebaseapp.com",
+          projectId: "ryan-stoffel-portfolio",
+          storageBucket: "ryan-stoffel-portfolio.firebasestorage.app",
+          messagingSenderId: "576788975316",
+          appId: "1:576788975316:web:e971e2cdb0800e6866f541",
+          measurementId: "G-863ZW0T6C6"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 </html>
