@@ -146,6 +146,13 @@ section {
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+    background: transparent;  /* Fully transparent */
+    backdrop-filter: none;    /* Remove blur effect */
+    border-radius: 2rem;     /* Keep rounded corners */
+    border: none;            /* Remove border */
+    box-shadow: none;        /* Remove shadow */
+    margin-bottom: 2rem;     /* Keep space between sections */
+    padding: 2rem;           /* Keep internal padding */
 }
 
 .section-container {
@@ -158,7 +165,7 @@ section {
 #profile {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    align-items: center;
     height: 80vh;
 }
 
@@ -171,8 +178,8 @@ section {
 }
 
 .section__text {
-    align-self: center;
     text-align: center;
+    max-width: 600px;
 }
 
 .section__text p {
@@ -218,22 +225,41 @@ section {
 }
 
 .about-containers {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+}
+
+.details-container {
+    background: transparent;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1rem;
+}
+
+.details-container:hover {
+    transform: none;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
 .about-details-container {
-    justify-content: center;
-    flex-direction: column;
-}
-
-.about-containers, .about-details-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
+/* Remove image-related styles */
 .about-pic {
-    border-radius: 2rem;
+    display: none;
 }
 
 .arrow {
@@ -248,61 +274,6 @@ section {
 
 .arrow:hover {
     transform: translateY(8px);
-}
-
-.details-container {
-    padding: 1.5rem;
-    flex: 1;
-    border-radius: 2rem;
-    border: rgb(0, 0, 0) 0.1 rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center;
-}
-
-.section-container {
-    gap: 4rem;
-    height: 80%;
-}
-
-.section__pic-container {
-    height: 500px;
-    width: 500px;
-    margin: auto 0;
-}
-
-/* ===================
-   8. EXPERIENCE SECTION
-   =================== */
-#experience {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.experience-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin: 1rem 0;
-}
-
-.article-container {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1rem 0;
-}
-
-.article-container article {
-    width: 10rem;
-    padding: 1rem;
-    border-radius: 2rem;
-    border: 1px solid rgb(163, 163, 163);
-    transition: transform 0.3s ease;
 }
 
 .experience-sub-title {
@@ -335,156 +306,135 @@ section {
     position: relative;
     height: auto;
     min-height: 100vh;
+    padding: 4rem 0;
+    margin: 0 auto;
+    overflow: visible;
 }
 
 .project-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-    margin: 3rem 0;
-    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 1400px;
+    padding: 0 4rem;
+    position: relative;
+    z-index: 1;
 }
 
 .project-card {
-    flex: 1;
-    min-width: 300px;
-    max-width: 380px;
-    background: white;
-    border-radius: 20px;
-    padding: 1.8rem;
-    border: 1px solid rgba(163, 163, 163, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
     position: relative;
-    height: auto;
-    min-height: 600px;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(163, 163, 163, 0.2);
+}
+
+/* Always show overlay and title */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    opacity: 1;
 }
 
 .project-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: rgb(30, 30, 30);
-    margin-bottom: 1rem;
-}
-
-.project-description {
-    color: rgb(85, 85, 85);
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.project-features {
-    list-style: none;
-    margin: 1.2rem 0;
-    padding-left: 0.5rem;
-}
-
-.project-features li {
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
-    color: rgb(85, 85, 85);
-    font-size: 0.95rem;
-}
-
-.project-features li::before {
-    content: "→";
     position: absolute;
-    left: 0;
-    color: rgb(53, 53, 53);
-    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    z-index: 2;
+    opacity: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .project-btn-container {
-    margin-top: auto;
-    padding-top: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
     display: flex;
     gap: 1rem;
-    width: 100%;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-btn-container {
+    opacity: 1;
 }
 
 .project-btn {
     flex: 1;
-    padding: 0.8rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
     text-align: center;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .project-btn.live {
-    background: rgb(53, 53, 53);
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+}
+
+.project-btn.live:hover {
+    background: white;
 }
 
 .project-btn.github {
     background: transparent;
-    color: rgb(53, 53, 53);
-    border: 2px solid rgb(53, 53, 53);
-}
-
-.project-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-btn.live:hover {
-    background: rgb(30, 30, 30);
+    color: white;
+    border: 1px solid white;
 }
 
 .project-btn.github:hover {
-    background: rgba(53, 53, 53, 0.1);
-    border-color: rgb(30, 30, 30);
+    background: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .project-btn-container {
-        padding: 1rem 0;
-    }
-    
-    .project-btn {
-        width: 100%;
-        max-width: none;
-    }
+/* Remove all other project-related classes that aren't being used */
+.project-tech,
+.project-description,
+.project-features {
+    display: none;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .project-container {
-        gap: 2rem;
-    }
-    .project-card {
-        max-width: calc(50% - 2rem);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .project-card {
-        max-width: 100%;
-    }
     .project-container {
-        gap: 1.5rem;
-        margin: 2rem 0;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .project-card {
+        height: auto;
+        min-height: 400px;
     }
 }
 
@@ -547,14 +497,12 @@ section {
 
 /* Add to existing media queries */
 @media (max-width: 1000px) {
-    .education-details-container .about-containers {
+    .about-containers {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
     }
 
-    .education-details-container .details-container {
-        width: 100%;
+    .details-container {
         max-width: 100%;
     }
 }
@@ -850,6 +798,12 @@ section {
     width: 100%;
     height: 100%;
     z-index: -1;
+    background-color: #ffffff;  /* or any color you prefer */
+}
+
+/* Optional: Add a subtle gradient overlay */
+#profile::before {
+    display: none;
 }
 
 /* Arrow styling for all sections */
@@ -880,96 +834,255 @@ section {
 }
 
 .experience-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 3rem;
+    margin: 2rem auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 600px;
+    align-items: center;
 }
 
 .experience-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .experience-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1.5rem;
 }
 
 .experience-header h3 {
-    color: black;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .company {
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #333;
 }
 
 .duration {
-    color: var(--text-color-secondary);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-style: italic;
+    color: #666;
 }
 
 .experience-details {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    margin-bottom: 1.5rem;
+    padding: 0 1rem;
 }
 
 .experience-details li {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    font-size: 1.15rem;
+    padding-left: 2rem;
     position: relative;
+    color: #444;
 }
 
 .experience-details li::before {
-    content: "-";
+    content: "→";
     position: absolute;
     left: 0;
-    color: black;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    color: #333;
+    font-weight: bold;
 }
 
 .experience-details li:last-child {
     margin-bottom: 0;
 }
 
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    align-items: center;
+}
+
+.about-containers {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .experience-item {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .experience-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .company {
+        font-size: 1.1rem;
+    }
+    
+    .experience-details li {
+        font-size: 1rem;
+    }
+}
+
 .tech-used {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .tech-badge {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--primary-color);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    background: #f0f0f0;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
     font-weight: 500;
-    letter-spacing: 0.5px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
 .tech-badge:hover {
-    background: var(--primary-color);
+    background: #333;
     color: white;
     transform: translateY(-2px);
+}
+
+/* Adjust media queries for responsive design */
+@media (max-width: 1400px) {
+    section {
+        margin: 0 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        margin: 0 2rem;
+        padding: 1rem;
+    }
+}
+
+/* Add at the top of your CSS file */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Update section margins for mobile */
+@media (max-width: 768px) {
+    section {
+        margin: 0 1rem;  /* Reduced side margins */
+        padding: 1rem;
+        width: auto;     /* Allow content to adjust to screen width */
+    }
+
+    .experience-item {
+        margin: 1rem 0;  /* Remove horizontal margin */
+        width: auto;     /* Allow content to adjust */
+        padding: 1.5rem; /* Reduced padding */
+    }
+
+    .about-containers {
+        padding: 0;      /* Remove padding that might cause overflow */
+    }
+}
+
+/* Ensure all containers respect viewport width */
+.section-container,
+.about-details-container,
+.experience-details-container,
+.project-container {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Skills section styling */
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.details-container {
+    background: transparent;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1rem;
+}
+
+.experience-subtitle {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+}
+
+article .icon {
+    width: 24px;
+    height: 24px;
+}
+
+article div {
+    flex: 1;
+}
+
+article h3 {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+article p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .article-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .details-container {
+        padding: 1.5rem;
+        margin: 0.5rem;
+    }
+
+    article {
+        padding: 0.8rem 1.2rem;
+    }
 }
